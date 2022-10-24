@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,9 +8,57 @@
     <title>Create Product</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
 </head>
+
 <body>
-    Create
+    <div class="container mt-5">
+
+        <form action="/store" method="post" enctype="multipart/form-data">
+            <div class="card">
+                <div class="card-header">
+                    <div class="row">
+                        <div class="col-6">
+                            {{.PageTitle}}
+                        </div>
+                        <div class="col-6 text-end">
+                            <a href="/" class="btn btn-sm btn-success">Back</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="form-group">
+                        <label for="">Name</label>
+                        <input type="text" class="form-control" name="name">
+                    </div>
+                    <div class="form-group">
+                        <label for="">Description</label>
+                        <textarea name="description" class="form-control" rows="5"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="">Price</label>
+                        <input type="number" class="form-control" name="price">
+                    </div>
+                    <div class="form-group">
+                        <label for="">Image</label>
+                        <input type="file" class="form-control" name="image">
+                    </div>
+                    <div class="form-group">
+                        <label for="">Status</label>
+                        <select name="status" class="form-select">
+                            <option value="1">Active</option>
+                            <option value="0">In Active</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="card-footer text-end">
+                    <button type="reset" class="btn btn-secondary">Cancel</button>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+            </div>
+        </form>
+
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"></script>
 </body>
+
 </html>
